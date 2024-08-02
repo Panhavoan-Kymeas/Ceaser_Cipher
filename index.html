@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ceaser Cipher Tool</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Ceaser Cipher Tool</h1>
+            <p>Secure your messages with Ceaser encryption and decryption</p>
+
+            <div id="encrypt-fields">
+                <div class="input-group">
+                    <label for="plaintext">Message:</label>
+                    <textarea id="plaintext" rows="4"
+                        placeholder="Enter your message"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="e">Shift (Key):</label>
+                    <input type="number" id="shiftEncrypt"
+                        placeholder="Enter the shift key">
+                </div>
+            </div>
+
+            <div id="decrypt-fields">
+                <div class="input-group">
+                    <label for="ciphertext">Ciphertext:</label>
+                    <textarea id="ciphertext" rows="4"
+                        placeholder="Enter ciphertext"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="n">Shift (Key):</label>
+                    <input type="number" id="shiftDecrypt"
+                        placeholder="Enter the shift key">
+                </div>
+            </div>
+
+            <button id="process" class="btn">Encrypt</button>
+            <button id="reset" class="btn">Reset</button>
+
+            <div class="toggle-container">
+                <span class="toggle-label">Encrypt</span>
+                <label class="toggle">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Decrypt</span>
+            </div>
+            <div id="result-container">
+                <h2>Result:</h2>
+                <p id="result"></p>
+                <div id="private-key-container">
+                    <button id="reveal-shift-key">Reveal the shift key</button>
+                    <p id="private-key"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
